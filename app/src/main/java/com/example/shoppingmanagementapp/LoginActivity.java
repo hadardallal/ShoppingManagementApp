@@ -3,6 +3,8 @@ package com.example.shoppingmanagementapp;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,6 +25,11 @@ public class LoginActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
+        Animation scaleAnimation = AnimationUtils.loadAnimation(this, R.anim.blink);
+        loginButton.startAnimation(scaleAnimation);
+
+
+
         registerButton = findViewById(R.id.registerButton);
 
         sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);

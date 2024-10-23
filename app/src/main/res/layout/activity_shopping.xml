@@ -2,75 +2,101 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/shop">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/shop"
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Welcome "
+        android:paddingStart="3dp"
+        android:textSize="25sp"
+        android:fontFamily="@font/indieflowerregular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/usernameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginBottom="32dp"
-            android:paddingStart="20dp"
-            android:text="Welcome "
-            android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/productName"
-            android:layout_width="310dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:hint="Product Name"
-            android:textColorHint="#6B000000"
-            android:textColor="#000000"/>
 
-        <EditText
-            android:id="@+id/quantity"
-            android:layout_width="310dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="32dp"
-            android:hint="Quantity"
-            android:textColorHint="#6B000000"
-            android:inputType="number"
-            android:textColor="#000000"/>
+    <EditText
+        android:id="@+id/productName"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:hint="Product Name"
+        android:textColorHint="#6B000000"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/indieflowerregular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameTextView"
+        app:layout_constraintWidth_percent="0.8"/>
 
-        <Button
-            android:id="@+id/addProductButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/button_design"
-            android:text="Add Product" />
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:hint="Quantity"
+        android:textColorHint="#6B000000"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/indieflowerregular"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productName"
+        app:layout_constraintWidth_percent="0.8" />
 
-        <Button
-            android:id="@+id/removeProductButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/button_design"
-            android:text="Remove Product" />
+    <Button
+        android:id="@+id/addProductButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/button_design"
+        android:text="Add Product"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/indieflowerregular"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantity"
+        app:layout_constraintWidth_percent="0.8" />
 
-        <ListView
-            android:id="@+id/productListView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textColor="#000000" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/removeProductButton"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_design"
+        android:text="Remove Product"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/indieflowerregular"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addProductButton"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ListView
+        android:id="@+id/productListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="#000000"
+        android:background="#C0D3B1B1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/removeProductButton"
+        app:layout_constraintWidth_percent="0.8"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

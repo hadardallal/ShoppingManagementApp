@@ -10,12 +10,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="100dp"
         android:text="Login:"
-        android:textSize="24sp"
+        android:textSize="42sp"
         android:textStyle="bold"
+        android:fontFamily="@font/indieflowerregular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,10 +24,13 @@
         android:id="@+id/usernameEditText"
         android:layout_width="310dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:hint="Username"
         android:textColorHint="#6B000000"
         android:textColor="#000000"
+        android:textSize="24sp"
+        android:background="#44D9A1A1"
+        android:fontFamily="@font/indieflowerregular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView"
@@ -41,6 +45,9 @@
         android:textColorHint="#6B000000"
         android:inputType="textPassword"
         android:textColor="#000000"
+        android:textSize="24sp"
+        android:background="#44D9A1A1"
+        android:fontFamily="@font/indieflowerregular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/usernameEditText"
@@ -48,25 +55,35 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/button_design"
         android:text="Login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:fontFamily="@font/indieflowerregular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        app:layout_constraintWidth_percent="0.8"/>
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/button_design"
         android:text="New User"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:fontFamily="@font/indieflowerregular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        app:layout_constraintWidth_percent="0.8"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

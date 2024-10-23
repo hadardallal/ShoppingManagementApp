@@ -33,7 +33,7 @@ public class ShoppingActivity extends AppCompatActivity {
         productListView = findViewById(R.id.productListView);
 
         String username = getIntent().getStringExtra("username");
-        usernameTextView.setText("Welcome " + username);
+        usernameTextView.setText("Welcome " + username + ",");
 
         productList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, productList);

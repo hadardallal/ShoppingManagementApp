@@ -3,6 +3,8 @@ package com.example.shoppingmanagementapp;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -27,7 +29,10 @@ public class RegisterActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password);
         phoneEditText = findViewById(R.id.phone);
         emailEditText = findViewById(R.id.email);
+
         registerButton = findViewById(R.id.registerButton);
+        Animation scaleAnimation = AnimationUtils.loadAnimation(this, R.anim.blink);
+        registerButton.startAnimation(scaleAnimation);
 
         sharedPreferencesUsername = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
